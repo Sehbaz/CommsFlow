@@ -1,4 +1,4 @@
-# CommsFlow2
+# CommsFlow
 
 A simple ASP.NET Core Web API for managing templates. This project lets you create and list templates using a SQLite database. It includes basic endpoints and Swagger UI for easy testing.
 
@@ -11,7 +11,7 @@ A simple ASP.NET Core Web API for managing templates. This project lets you crea
 
 ## How to Run
 
-1. Install .NET 8 or later.
+1. Install .NET 10 SDK or later.
 2. Install required NuGet packages:
    ```sh
    dotnet add package Microsoft.EntityFrameworkCore
@@ -60,7 +60,3 @@ docker-compose up --build
 The API will be available at `http://localhost:5275/swagger`
 
 Open your browser at `http://localhost:5275/swagger` to test the endpoints.
-
----
-
-This project is a good starting point for learning how APIs work with .NET and Entity Framework Core.
