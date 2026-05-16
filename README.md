@@ -40,7 +40,7 @@ A simple ASP.NET Core Web API for managing templates. This project lets you crea
 
 To build and run the app in Docker:
 
-+1. Build the Docker image:
+1. Build the Docker image:
 
 ```sh
 docker build -t commsflow .
@@ -57,7 +57,9 @@ Or use Docker Compose:
 docker-compose up --build
 ```
 
-The API will be available at `http://localhost:5275/swagger`. 7. Open your browser at `http://localhost:5275/swagger` to test the endpoints.
+The API will be available at `http://localhost:5275/swagger`
+
+Open your browser at `http://localhost:5275/swagger` to test the endpoints.
 
 ---
 
