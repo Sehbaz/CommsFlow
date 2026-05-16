@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  commsflow:
+    build: .
+    ports:
+      - "5275:5275"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./app.db:/app/app.db
