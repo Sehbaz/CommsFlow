@@ -1,0 +1,6 @@
+@CommsFlow_HostAddress = http://localhost:5275
+
+GET {{CommsFlow_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

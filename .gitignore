@@ -1,0 +1,13 @@
+# .gitignore for ASP.NET Core / EF Core projects
+bin/
+obj/
+*.db
+*.db-shm
+*.db-wal
+appsettings.Development.json
+.env
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
