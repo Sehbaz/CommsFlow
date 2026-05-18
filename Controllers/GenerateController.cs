@@ -6,7 +6,7 @@ namespace Commsflow.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class GenerateController: ControllerBase
+public class GenerateController : ControllerBase
 {
     private readonly Data.AppDbContext _context;
 
@@ -32,7 +32,7 @@ public class GenerateController: ControllerBase
 
         var job = new CommunicationJob
         {
-            Id = request.TemplateId,
+            RecipientName = request.Name,
             RecipientEmail = request.Email,
             GeneratedContent = generatedContent,
             Status = "Pending",
