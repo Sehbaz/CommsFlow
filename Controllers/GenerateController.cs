@@ -1,5 +1,5 @@
 using Commsflow.DTOs;
-using Commsflow.Models;
+using Commsflow.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Commsflow.Controllers;

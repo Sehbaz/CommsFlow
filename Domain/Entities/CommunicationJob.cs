@@ -1,4 +1,4 @@
-namespace Commsflow.Models;
+namespace Commsflow.Domain.Entities;
 
 public class CommunicationJob
 {
@@ -6,7 +6,7 @@ public class CommunicationJob
     public string RecipientName { get; set; } = string.Empty;
     public string RecipientEmail { get; set; } = string.Empty;
     public string GeneratedContent { get; set; } = string.Empty;
-    public string Status { get; set; } = "Pending"; 
+    public string Status { get; set; } = "Pending";
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
 }

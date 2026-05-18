@@ -1,5 +1,5 @@
 using Commsflow.Data;
-using Commsflow.Models;
+using Commsflow.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,7 +7,7 @@ namespace Commsflow.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class TemplatesController: ControllerBase
+public class TemplatesController : ControllerBase
 {
     private readonly AppDbContext _context;
 
@@ -19,7 +19,7 @@ public class TemplatesController: ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<Template>>> GetTemplates()
     {
-        return  await _context.Templates.ToListAsync();
+        return await _context.Templates.ToListAsync();
     }
 
     [HttpPost]
