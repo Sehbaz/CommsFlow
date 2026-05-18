@@ -28,6 +28,8 @@ if (!string.IsNullOrWhiteSpace(port))
 }
 
 app.UseAuthorization();
+app.MapGet("/", () => Results.Redirect("/swagger"));
+app.MapGet("/health", () => Results.Ok("OK"));
 app.MapControllers();
 app.Run();
 
