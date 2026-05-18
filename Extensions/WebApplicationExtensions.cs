@@ -4,6 +4,9 @@ public static class WebApplicationExtensions
 {
     public static WebApplication UseApplicationMiddleware(this WebApplication app)
     {
+
+        app.UseMiddleware<Commsflow.Middleware.ExceptionHandlingMiddleware>();
+
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
