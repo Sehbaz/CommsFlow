@@ -63,7 +63,7 @@ docker build -t commsflow .
 
 2. Run the container:
    ```sh
-   docker run -p 5275:5275 commsflow
+   docker run -p 5275:8080 commsflow
    ```
 
 Or use Docker Compose:

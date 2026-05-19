@@ -3,7 +3,6 @@ using Commsflow.Data;
 using Commsflow.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Xunit;
 
 namespace CommsFlow.Tests;
 

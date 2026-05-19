@@ -5,7 +5,7 @@ namespace Commsflow.Api.Extensions;
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddApplicationServices(
-        this IServiceCollection services, 
+        this IServiceCollection services,
         IConfiguration configuration)
     {
         services.AddControllers();
@@ -14,11 +14,13 @@ public static class ServiceCollectionExtensions
     }
 
     public static IServiceCollection AddDatabase(
-        this IServiceCollection services, 
+        this IServiceCollection services,
         IConfiguration configuration)
     {
-         var connectionString =
-            configuration.GetConnectionString("DefaultConnection");
+        var connectionString =
+            configuration.GetConnectionString("DefaultConnection")
+            ?? configuration["defaultConnection"]
+            ?? "Data Source=app.db";
 
         services.AddDbContext<Data.AppDbContext>(options =>
             options.UseSqlite(connectionString));
