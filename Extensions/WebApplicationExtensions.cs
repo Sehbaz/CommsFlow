@@ -4,16 +4,15 @@ public static class WebApplicationExtensions
 {
     public static WebApplication UseApplicationMiddleware(this WebApplication app)
     {
-
         app.UseMiddleware<Commsflow.Middleware.ExceptionHandlingMiddleware>();
+
+        app.UseSwagger();
+        app.UseSwaggerUI();
 
         if (app.Environment.IsDevelopment())
         {
-            app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseHttpsRedirection();
         }
-
-        app.UseHttpsRedirection();
 
         app.UseAuthorization();
 
@@ -26,7 +25,7 @@ public static class WebApplicationExtensions
 
         app.MapHealthChecks("/health");
 
-        app.MapGet("/swagger", () => Results.Redirect("/swagger"));
+        app.MapGet("/", () => Results.Redirect("/swagger"));
 
         return app;
     }

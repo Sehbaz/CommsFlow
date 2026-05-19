@@ -13,6 +13,10 @@ A simple ASP.NET Core Web API for managing templates. This project lets you crea
 - Add new templates
 - Simple SQLite database integration
 - Swagger UI for API documentation
+- Global exception handling middleware
+- Request validation with data annotations
+- Health check endpoint at `/health`
+- Automated tests with xUnit and EF Core InMemory
 
 ## How to Run
 
@@ -40,6 +44,14 @@ A simple ASP.NET Core Web API for managing templates. This project lets you crea
    ```sh
    dotnet run
    ```
+
+## Testing
+
+Run tests from the project root:
+
+```sh
+dotnet test CommsFlow.Tests/CommsFlow.Tests.csproj -v normal
+```
 
 ## Docker
 
